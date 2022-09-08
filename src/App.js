@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import "./App.css"
 
-function App() {
+
+const App = () => {
+    const [ liability, setLiability ] = useState(0)
+    const [ equity, setEquity ] = useState(0)
+    const [ assets, setAssets ] = useState(0)
+    
+    useEffect(() => {
+        setAssets(equity + liability)
+    }
+    , [equity, liability])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'> 
+        <div className='app__main'>
+            <div className='app__content'>
+                <div className='app__title'>
+                    <h1>Accuonting Equation</h1>
+                    <p>( Assets = Liabilities + Equity )</p>
+                </div>
+                <div className='app__calc'>
+                    <div className='app__inputContainer'>
+                        <div className='app__input'>
+                            <p> Liabilities: </p>
+                            <span className='app__currencyInput'>$ <input type="number" value={ liability } onChange={ (e) => setLiability(Number(e.target.value)) } /></span>
+                        </div>
+                        <div className='app__input'>
+                            <p> Equity: </p>
+                            <span className='app__currencyInput'>$ <input type="number" value={ equity } onChange={ (e) => setEquity(Number(e.target.value)) } /></span>
+                        </div>
+                    </div>
+                    <div className='app__result'>
+                        <div className='app__resultContainer'>
+                            <h2>Assets:</h2>
+                            <p>$ { assets }</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

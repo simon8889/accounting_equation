@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+.app {
+    width: 100vw;
+    height: 100vh;
+    letter-spacing: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__content {
+    box-sizing: content-box;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: #e9edc9;
+    border-radius: 10px;
+    padding: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__title {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app__title > p {
+    color: #d4a373;
+    font-family: 'Mulish', sans-serif;
+    font-size: .9rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+    color: #d4a373;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
+
+.app__calc {
+    box-sizing: content-box;
+    display: flex;
+    place-items: center;
+    width: 90%;
+    height: 90%;
+    margin: 30px;
+} 
+
+.app__inputContainer {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app__input {
+    display: flex;
+    box-sizing: content-box;
+    place-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    margin: 4px 0;
+    border-radius: 10px;
+    background-color: #ccd5ae;
+    font-family: "Mulish", sans-serif;
+    color: #bb7a3abe;
+}
+
+.app__input p {
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+.app__result {
+    display: grid;
+    place-items: center;
+    box-sizing: content-box;
+    width: 37%;
+    margin: 8px;
+    height: 97%;
+    border-radius: 10px;
+    background-color: #ccd5ae;
+    font-family: "Mulish", sans-serif;
+    color: #bb7a3abe;
+}
+
+.app__resultContainer {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.app__resultContainer p {
+    text-align: center;
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.app__currencyinput {
+    border: 1px inset #ccc;
+}
+
+input {
+    border: 0;
+    padding: 3px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    background-color: #bbc89383;
+    color: #bb7a3a;
+    outline: none;
+    transition: all ease .3s;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    padding: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 1200px){ 
+    .app__content {
+        width: 80%;
+        height: 80%;
+        padding: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .app__calc {
+        flex-direction: column;
+    }
+    
+    .app__inputContainer {
+        width: 100%;
+
+    }
+    
+    .app__result {
+        width: 100%;
+    }
+    
+
+    .app__resultContainer {
+        width: 100%;
+    }
+    
+
+}
+
