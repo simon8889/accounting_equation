@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/accounting_equation/static/css/main.daf3d246.css",
+    "main.js": "/accounting_equation/static/js/main.9cc1c46a.js",
+    "static/js/787.18e65172.chunk.js": "/accounting_equation/static/js/787.18e65172.chunk.js",
+    "index.html": "/accounting_equation/index.html",
+    "main.daf3d246.css.map": "/accounting_equation/static/css/main.daf3d246.css.map",
+    "main.9cc1c46a.js.map": "/accounting_equation/static/js/main.9cc1c46a.js.map",
+    "787.18e65172.chunk.js.map": "/accounting_equation/static/js/787.18e65172.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.daf3d246.css",
+    "static/js/main.9cc1c46a.js"
+  ]
+}
